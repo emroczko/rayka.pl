@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+  
+@font-face {
+    font-family: myFirstFont;
+    src: url("LEMONMILK-Medium.otf");
+}
+
+a {
+    
+text-decoration: none;
+  color: #262626;
+  padding: 2vw;
+  
+}
+li {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    list-style-type: none;
+    margin: 0 2vw;
+    font-size: 3vh;
+}
+
+.page-navigation {
+    
+    width: 100vw;
+    background-color: #57B681;
+    top: 0;
+    position: -webkit-sticky; 
+    position: sticky;
+    z-index: 1;
+  }
+
+.page-navigation-items{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 14px 16px;
+    margin: 0;
+   /* padding: 0;*/
+    display: flex;
+  }
+  
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #262626;
+    font-family: myFirstFont;
+  }
+
+  a:hover{
+    background-color: #F8494F;
+  }
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 542px;
+    height: 286px;
+  }
+
+ .page {
+     padding: 0;
+     margin: 0em;
+ }
+  .welcomephoto{
+    background-image: url(photo1.png)/* no-repeat center fixed*/; 
+    width: 100%;
+    height: 59%;
+    position: relative;
+    background-size: cover;
+    
+    padding: 10px; 
+    margin: 0;
+    color: rgb(211, 210, 210);
+    text-align: center;
+    
+  }
+
+  .offer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+ 
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    background-color: #aaa;
+  }
+  .offertext {
+    position: relative;
+    top: 36%;
+    color: #262626
+  }
+  .heads{
+    position: relative;
+    top: 35%;
+    font-size: 5vh;
+    color: #F8494F;
+  }
+
+ .realizacje {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    background-color: #57B681
+ }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #262626
+
+  }
+  
+  
+
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+ 
+
