@@ -66,7 +66,7 @@ body{
      margin: 0em;
  }
   .welcomephoto{
-    background-image: url(photo1.png)/* no-repeat center fixed*/; 
+    background-image: url(photo1.png)/* no-repeat center fixed*/;
     width: 100%;
     height: 60%;
     position: relative;
@@ -99,6 +99,12 @@ body{
     top: 36%;
     color: #57B681
   }
+  .contacttext {
+    position: relative;
+    top: 36%;
+    font-size: larger;
+    color: rgb(211, 208, 208)
+  }
   .heads{
     position: relative;
     top: 35%;
@@ -126,7 +132,15 @@ body{
   text-align: center;
   background-color: #262626;
  }
-
+.clipsgallery{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  background-color: #262626;
+}
  .contacts {
   width: 100%;
   height: 100%;
@@ -151,14 +165,36 @@ body{
     background: #262626
 
   }
-  
-  
+  .clip{
+    border-top: 4px solid #F8494F;
+  }
+
+  .clip:hover{
+    border: 4px solid #57B681;
+  }
+  .footer {
+    color: #57B681;
+  }
 
   
   /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .topnav a {
+  @media screen and (max-width: 800px) {
+    .page-navigation a {
       float: none;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .clipsgallery{
+      height: 200%;
+      width: 100%;
+
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .clip {
       width: 100%;
     }
   }
