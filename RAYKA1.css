@@ -82,25 +82,23 @@ li {
      margin: 0em;
      background-color: #aaa;
  }
-.welcomephoto{
-    background:  url(photo1.png) no-repeat center /*fixed*/;
+video{
+    width: 1440px;
+    height: 600px;
+
+    object-fit: cover;
     
-  /*
-    display: block;
-    margin-left: auto;
-    margin-right: auto;*/
+   
+}
+.showreel {
+    
+    padding: 0;
     width: 100%;
-    height: 60%;
-    background-size: cover;
+    max-height: 60%;
+    background-color: black;
 
-    transition:0.4s all;
-    padding: 10px;
-    color: rgb(211, 210, 210);
-    text-align: center;
     
-    
-  }
-
+}
   .offer {
     width: 100%;
     height: 100%;
