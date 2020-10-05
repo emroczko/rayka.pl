@@ -4,13 +4,15 @@
   
 @font-face {
     font-family: myFirstFont;
-    src: url("LEMONMILK-Medium.otf");
+    src: url("LEMONMILK-Medium.woff");
 }
 body {
   margin: 0;
   padding: 0;
   background-color: #262626;
+  font-display: fallback;
   font-family: myFirstFont;
+  overflow-x: hidden;
 }
 .page-header {
   display: flex;
@@ -34,8 +36,8 @@ body {
   flex-direction: row;
 }
 .socials {
-width: 35px;
-height:35px;
+width: 100%;
+height:15%;
 }
 .social_links:hover{
 background-color: #aaa;
@@ -136,7 +138,7 @@ video{
   }
   
   
- .money{
+ .money {
   width: 100%;
   height: 100%;
   position: relative;
@@ -144,7 +146,7 @@ video{
   padding: 10px;
   margin: 0;
   text-align: center;
-    background-color: #57B681
+  background-color: #57B681
  }
 
 
@@ -166,6 +168,25 @@ video{
   text-align: center;
   background-color: #262626;
 }
+.fake_clip{
+  margin: 1vh;
+  width: 44%;
+  height: 44%;
+  border-top: 4px solid #F8494F;
+}
+
+.fake_clip:hover{
+  border: 4px solid #57B681;
+}
+iframe{
+  margin: 1vh;
+  width: 44%;
+  height: 44%;
+  border-top: 4px solid #F8494F;
+}
+iframe:hover{
+  border: 4px solid #57B681;
+}
  .contacts {
   width: 100%;
   height: 100%;
@@ -179,7 +200,7 @@ video{
  }
  .contactcontainer{
    position: absolute;
-   width: 100%;
+   width: 98%;
    top: 45%;
   display: block;
  }
@@ -194,7 +215,7 @@ video{
 
 .form {
   width: 50%;
-float: left;
+  float: left;
 font-size: 3vh;
   color: #262626;
 }
@@ -214,7 +235,7 @@ input, textarea {
 input[type=submit]{
   background-color: #57B681;
 }
- .heads1 {
+ .head_contact {
   position: relative;
   top: 35%;
   font-size: 5vh;
@@ -226,13 +247,7 @@ input[type=submit]{
     text-align: center;
     background: #262626
   }
-  .clip{
-    border-top: 4px solid #F8494F;
-  }
-
-  .clip:hover{
-    border: 4px solid #57B681;
-  }
+ 
   .footer {
     color: #57B681;
   }
@@ -267,14 +282,6 @@ input[type=submit]{
     color: #F8494F;
     border-bottom: 2px solid #262626;
   }
-  /*
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other 
-  @media screen and (max-width: 800px) {
-    .page-navigation-items {
-      flex-direction: column;
-      width: 100%;
-    }
-  }*/
 
  /* Extra small devices (phones, 600px and down) */
 @media only screen 
@@ -298,18 +305,24 @@ and (max-width: 600px) {
 
   }
   .social_links {
-  width: auto;
-  
+ max-width: 13%;
+  max-height: 8.5%;
   }
   .socials{
-       
+    width: 100%;
+    height:100%
   }
+  
   .clipsgallery{
     height: 200%;
     width: 100%;
   }
-  .clip {
-    width: 100%;
+  .fake_clip {
+    width: 78%;
+  height: 20%;
+  }
+  iframe{
+    width: 100%
   }
   .page-navigation-items {
     display: none;
@@ -382,27 +395,29 @@ and (max-width: 600px) {
   }
   .mobile_showreel{
     padding: 0;
-    
     display: block;
     background:  url(welcomemobile.png) no-repeat center;
-    
-      width: 100%;
-      height: 60%;
-      background-size: cover;
-      
-      
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+  }
+  .money{
+    height: 150%;
   }
   .offer {
     height: 130%;
   }
-  
+  .head_contact {
+    top: 5%;
+   }
+
   .contacts {
-    height: 180%;
+    height: 100%;
   }
   .contactcontainer{
     position: absolute;
     width: 100%;
-    top: 45%;
+    top: 10%;
    display: flex;
    flex-direction: column;
   }
@@ -428,10 +443,26 @@ and (max-width: 600px) {
 @media only screen and (min-width: 600px) {} 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {} 
+@media only screen and (min-width: 768px) {
+  
+} 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {} 
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .clipsgallery{
+    height: 260%;
+  }
+  .fake_clip{
+    margin: 1vh;
+    width: 75%;
+    height: 22%;
+  }
+  iframe{
+    margin: 1vh;
+    width: 75%;
+    height: 22%;
+  }
+} 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
