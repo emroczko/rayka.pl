@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="RAYKA.css">
        <script src="jquery-3.5.1.min.js"></script>
+       
        <script src="RAYKA.js"></script>
+       
+       
 
     </head>
     
@@ -103,23 +106,23 @@
                     </tr>
                     <tr>
                       <td>teledysk</td>
-                      <td>1500</td>
+                      <td>1500 zł</td>
                     </tr>
                     <tr>
                       <td>reklama</td>
-                      <td>1500</td>
+                      <td>1500 zł</td>
                     </tr>
                     <tr>
                         <td>film weselny</td>
-                        <td>2000</td>
+                        <td>2000 zł</td>
                       </tr>
                       <tr>
                         <td>relacja</td>
-                        <td>1000</td>
+                        <td>1000 zł</td>
                       </tr>
                       <tr>
                         <td>spot promocyjny</td>
-                        <td>1500</td>
+                        <td>1500 zł</td>
                       </tr>
                   </table>
             
@@ -162,10 +165,16 @@
                          <p class="write_us" >Napisz do nas!</p>    
                          <form action="https://rayka.pl/server.php" target="_blank" method="post" id="form">
                           <label for="email">Podaj swój email:</label><br>
-                          <input type="email" id="email" name="email" placeholder="Twój email..." required><br>
+                          <input type="email" id="email" name="email" maxlength="35" placeholder="Twój email..." required><br>
                           <label for="message">Treść wiadomości:</label><br>
-                          <textarea type="message" id="message" name="message" rows="3" placeholder="Twoja wiadomość..."></textarea><br>
-                          <input type="submit" value="Wyślij!">
+                          <textarea type="message" id="message" name="message" maxlength="150" rows="3" placeholder="Twoja wiadomość..." required></textarea><br>
+                          <div id="alert"></div>
+                          <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                          <button id="submit-button" type="submit">Wyślij!</button>
+                          <p class="google-message">Ta strona jest chroniona przez reCAPTCHA i Google.</p>
+                           <p class="google-message"> <a class="google" href="https://policies.google.com/privacy">Polityka Prywatności</a> 
+                            <a class="google" href="https://policies.google.com/terms">Warunki korzystania z usługi</a> 
+                        </p>
                         </form>
                      </div>
                 </div>
@@ -176,5 +185,6 @@
                 <h2>©RAYKA 2020</h2>
             </div>
         </div>
+        <script async src="https://www.google.com/recaptcha/api.js?render=6Lci5tMZAAAAAPgsg1phTB9hbltQW2VUY1dNJdg5"></script>
     </body>
 </html>

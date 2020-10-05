@@ -5,21 +5,6 @@ $(document).on('click', 'a[href^="#"]', function (e) {
     }, 500, 'linear');
 });
 
-$(document).ready(function(){
-    $('#form').on('submit', function(e){
-        e.preventDefault();
-        var email = $('#email').val();
-        var message = $('#message').val();
-        $.ajax({
-            type: "POST",
-            url: "https://rayka.pl/server.php",
-            data: {email: email, message: message},
-            success: function(data){
-                alert('Wiadomość o treści'+data.message+"została wysłana.\n"+"Nadawca: "+data.email);
-            }
-        });
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function(event){
 
@@ -59,6 +44,46 @@ document.addEventListener('DOMContentLoaded', function(event){
         
         parent.replaceChild(video,child);
     }
+});
+
+
+
+
+
+$(document).ready(function(){
+    $('#form').on('submit', function(event){
+        event.preventDefault();
+        $('#alert').text('Wysyłanie...').fadeIn(0); 
+        grecaptcha.ready(function () { 
+            grecaptcha.execute("6Lci5tMZAAAAAPgsg1phTB9hbltQW2VUY1dNJdg5", { action: "contact" }).then(function (token) { 
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+                $.ajax({
+                    type: "POST",
+                    url: "https://rayka.pl/server.php",
+                    data: $('#form').serialize(),
+                    dataType: 'json',
+                    
+                    success: function( _response ){
+                        var error = _response.error;
+                        var success = _response.success;
+                        if(error != null) {
+                            $('#alert').text(error);
+                        }
+                        else {
+                            $('#alert').text(success);
+                            $('#submit-button').remove();
+                        }
+                    },
+                    error: function(jqXhr, json, errorThrown){
+                        var error = jqXhr.responseText;
+                        $('#alert').html(error);
+                    }
+                });
+            }); 
+        });
+        
+    });
 });
 
 
