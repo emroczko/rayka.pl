@@ -7,6 +7,9 @@ $(document).on('click', 'a[href^="#"]', function (e) {
 
 
 document.addEventListener('DOMContentLoaded', function(event){
+    
+
+    detectmobilephone();
 
     document.getElementById("clip1").addEventListener("click", function playClip1(){
         var number = 1;
@@ -96,14 +99,32 @@ $(document).ready(function(){
 
 
 
-var interval = setInterval(photosChange, 3000)
-var index = 1;
 
-photos = ["photo1.png", "photo2.png", "photo3.png"]
+
+photos = ["photo1.png", "photo2.png", "photo3.png", "photo4.png", "photo5.png"]
 
 function photosChange() {
     document.getElementsByClassName("welcomephoto")[0].style.backgroundImage = "url(" + photos[index] +")";
-    changeFont(index);
-    if(index < 2) index++;
+    if(index < 4) index++;
     else index = 0;
+}
+
+function detectmobilephone() { 
+
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+
+    var interval = setInterval(photosChange, 1000)
+    var index = 1;
+
+    }
+    else {
+    document.getElementById("showreeljs").innerHTML = '<source src="showreel.mp4" type="video/mp4">';
+    }
 }
