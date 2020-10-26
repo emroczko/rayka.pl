@@ -45,7 +45,14 @@ document.addEventListener('DOMContentLoaded', function(event){
         parent.replaceChild(video,child);
     }
 });
-
+titlesGreen = ["rajza_green.jpg", "houston_green.png", "proznia_green.png", "poglos_green.png"]
+titlesRed = ["rajza_red.jpg", "houston_red.png", "proznia_red.png", "poglos_red.png"]
+function greenButton(number){
+    document.getElementById("clip"+number).src = titlesGreen[number-1];
+}
+function redButton(number){
+    document.getElementById("clip"+number).src = titlesRed[number-1];
+}
 
 
 
@@ -89,3 +96,14 @@ $(document).ready(function(){
 
 
 
+var interval = setInterval(photosChange, 3000)
+var index = 1;
+
+photos = ["photo1.png", "photo2.png", "photo3.png"]
+
+function photosChange() {
+    document.getElementsByClassName("welcomephoto")[0].style.backgroundImage = "url(" + photos[index] +")";
+    changeFont(index);
+    if(index < 2) index++;
+    else index = 0;
+}

@@ -47,7 +47,7 @@
                     <a class="page-navigation__link" href="#home" >STRONA GŁÓWNA</a>
                 </li>
                 <li class="page-navigation__item">
-                    <a class="page-navigation__link"  href="#offer">OFERTA</a>
+                    <a class="page-navigation__link"  href="#offer">O NAS</a>
                 </li>
                 <li class="page-navigation__item">
                     <a class="page-navigation__link"  href="#portfolio">CENNIK</a>
@@ -60,12 +60,15 @@
                 </li>
             </ul>
             <div class="dropdown">
-                <button class="dropbtn">MENU</button>
+                <div class="menu_button">
+                    <img src="menu.png" class="menu_icon" alt="menu icon">
+                </div>
+                
                 <div class="dropdown-content">
-                <a href="#offer">OFERTA</a>
-                <a href="#portfolio">CENNIK</a>
-                <a href="#video">TELEDYSKI</a>
-                <a href="#contact">KONTAKT</a>
+                    <a href="#offer">OFERTA</a>
+                    <a href="#portfolio">CENNIK</a>
+                    <a href="#video">TELEDYSKI</a>
+                    <a href="#contact">KONTAKT</a>
                 </div>
             </div>
         </nav>
@@ -75,12 +78,13 @@
         <div class="page" >
             
             <div class="showreel" >
-                <video muted width="1440" height="800" autoplay loop>
+                <video muted autoplay loop>
                 <source src="showreel.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
+              
             </div>
-            <div class="mobile_showreel"></div>
+            
             
             <div class="offer" id="offer">
                 <h1 class="heads">O NAS</h1>
@@ -145,10 +149,10 @@
             </div>
             <div class="clipsgallery" >
                 <div class="galleryYT">
-                    <img class="fake_clip" id="clip1" src="rajza.jpg" alt="obejrzyj rajzę"> 
-                    <img class="fake_clip" id="clip2" src="houston.jpg" alt="obejrzyj houstona"> 
-                    <img class="fake_clip" id="clip3" src="proznia.jpg" alt="obejrzyj próznię"> 
-                    <img class="fake_clip" id="clip4" src="poglos.jpg" alt="obejrzyj pogłos"> 
+                    <img class="fake_clip" id="clip1" src="rajza_red.jpg" alt="obejrzyj rajzę" onmouseover="greenButton(1)" onmouseout="redButton(1)"> 
+                    <img class="fake_clip" id="clip2" src="houston_red.png" alt="obejrzyj houstona" onmouseover="greenButton(2)" onmouseout="redButton(2)"> 
+                    <img class="fake_clip" id="clip3" src="proznia_red.png" alt="obejrzyj próznię" onmouseover="greenButton(3)" onmouseout="redButton(3)"> 
+                    <img class="fake_clip" id="clip4" src="poglos_red.png" alt="obejrzyj pogłos" onmouseover="greenButton(4)" onmouseout="redButton(4)"> 
                 </div>
             </div>
 
@@ -172,8 +176,8 @@
                           <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                           <button id="submit-button" type="submit">Wyślij!</button>
                           <p class="google-message">Ta strona jest chroniona przez reCAPTCHA i Google.</p>
-                           <p class="google-message"> <a class="google" href="https://policies.google.com/privacy">Polityka Prywatności</a> 
-                            <a class="google" href="https://policies.google.com/terms">Warunki korzystania z usługi</a> 
+                           <p class="google-message"> <a class="google" target="_blank" href="https://policies.google.com/privacy">Polityka Prywatności</a> 
+                            <a class="google" target="_blank" href="https://policies.google.com/terms">Warunki korzystania z usługi</a> 
                         </p>
                         </form>
                      </div>
