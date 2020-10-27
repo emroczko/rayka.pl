@@ -6,10 +6,15 @@ $(document).on('click', 'a[href^="#"]', function (e) {
 });
 
 
+
+var interval = setInterval(photosChange, 3000)
+var index = 1;
+
 document.addEventListener('DOMContentLoaded', function(event){
     
 
     detectmobilephone();
+    
 
     document.getElementById("clip1").addEventListener("click", function playClip1(){
         var number = 1;
@@ -61,6 +66,14 @@ function redButton(number){
 
 
 $(document).ready(function(){
+    if (localStorage.getItem("cookieSeen") != "shown") {
+        $(".cookie").delay(2000).fadeIn(1000);
+        localStorage.setItem("cookieSeen","shown")
+    };
+    $('.close').click(function() {
+        $('.cookie').fadeOut(1000);
+    })
+      
     $('#form').on('submit', function(event){
         event.preventDefault();
         $('#alert').text('Wysyłanie...').fadeIn(0); 
@@ -111,20 +124,15 @@ function photosChange() {
 
 function detectmobilephone() { 
 
-    if( navigator.userAgent.match(/Android/i)
+    if ( navigator.userAgent.match(/Android/i)
     || navigator.userAgent.match(/webOS/i)
     || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
     || navigator.userAgent.match(/iPod/i)
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)
-    ){
-
-    var interval = setInterval(photosChange, 1000)
-    var index = 1;
-
-    }
+    ){ }
     else {
     document.getElementById("showreeljs").innerHTML = '<source src="showreel.mp4" type="video/mp4">';
     }
 }
+

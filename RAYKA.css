@@ -16,16 +16,17 @@ body {
 }
 .page-header {
   display: flex;
+  height: 36%;
 }
 .space1 {
   flex: 0 0 30%;
 }
 
 .logo{
+  padding: 3%;
   flex: 0 0 40%;
   min-width: 38%;
-  min-height:34%;
-max-height: 36%
+  height: 100%;
 }
 
 .space2 {
@@ -36,7 +37,7 @@ max-height: 36%
   flex-direction: row;
 }
 .socials {
-width: 100%;
+width: 110%;
 height:15%;
 }
 .social_links:hover{
@@ -85,6 +86,7 @@ li {
 
 .page-navigation__link:hover{
     background-color: #F8494F;
+    border-radius: 2px;
   }
 .dropdown {
   display: none;
@@ -102,7 +104,7 @@ video{
 .showreel {
     padding: 0;
     width: 100%;
-    height: 60%;
+    height: 65%;
     background-color: black;
 }
 
@@ -124,7 +126,7 @@ video{
   }
   .costtext {
     position: relative;
-    top: 40%;
+    top: 36%;
     color: #262626;
   }
   .videotext {
@@ -139,11 +141,12 @@ video{
     font-size: 5vh;
     color: #F8494F;
   }
+ 
   
-  
+
  .money {
   width: 100%;
-  height: 100%;
+  height: 110%;
   position: relative;
 
   padding: 10px;
@@ -176,19 +179,23 @@ video{
   width: 44%;
   height: 44%;
   border-top: 4px solid #F8494F;
+  border-radius: 2px;
 }
 
 .fake_clip:hover{
   border: 4px solid #57B681;
+  border-radius: 2px;
 }
 iframe{
   margin: 1vh;
   width: 44%;
   height: 44%;
   border-top: 4px solid #F8494F;
+  border-radius: 2px;
 }
 iframe:hover{
   border: 4px solid #57B681;
+  border-radius: 2px;
 }
  .contacts {
   width: 100%;
@@ -250,10 +257,12 @@ input, textarea, button {
   background-color: #262626;
   color: aliceblue;
   border: none;
+  border-radius: 2px;
 }
 
 button{
   background-color: #57B681;
+  cursor: pointer;
 }
 
  .head_contact {
@@ -302,6 +311,42 @@ button{
     color: #F8494F;
     border-bottom: 2px solid #262626;
   }
+  .cookie {
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    padding: 5px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262626;
+ 
+    color: #F8494F;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  .policy {
+    color: #F8494F;
+    text-decoration: underline;
+    padding-left: 0; 
+  }
+  .close {
+    display: none;
+    padding: 0;
+display: inline-block;
+    height: 40px;
+    background-color: #57B681;
+    width: 20%;
+border-radius: 2px;;
+    text-align: center;
+font-size: 26px;
+    border: none;
+    color: #262626;
+    cursor: pointer;
+  }
+
 
   
 
@@ -312,32 +357,37 @@ and (max-width: 600px) {
  
   .page-header{
     flex-direction: column;
+    height: 50%;
+
   }
   .space1 {
     display: none;
   }
   
   .logo{
+    padding: 20px 40px; 
     width: 100%;
-    height:35%;
+    height:80%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .space2 {
     display: none;
   }
   .space3 {
-    justify-content: left;
+    justify-content: right;
+    padding-bottom: 3px;
 
   }
   .social_links {
-    max-width: 13%;
- min-width: 12%;
- max-height: 9%;
-  min-height: 8.5%;
+ width: 14%;
+ height: 40%;
+
 
   }
   .socials{
     width: 100%;
-    height:100%
+    height:40%
   }
   .showreel {
     display: none;
@@ -372,7 +422,7 @@ and (max-width: 600px) {
     font-size: 2.2vh;
   }
   .money{
-    height: 150%;
+    height: 110%;
   }
   .offer {
     height: 130%;
@@ -487,7 +537,7 @@ and (max-width: 600px) {
   background-size: contain;
   background-color: black;
 
-  transition:0.4s all;
+  transition: 2s all;
   padding: 10px;
   color: rgb(211, 210, 210);
   text-align: center;
@@ -519,6 +569,22 @@ and (max-width: 600px) {
     margin: 1vh;
     width: 75%;
     height: 22%;
+  }
+  .money {
+    height: 120%;
+  }
+} 
+@media only screen and (max-height: 600px)  {
+  
+  
+  .money {
+    height: 600px;
+  }
+  .contacts{
+    height: 160%;
+  }
+  .offer {
+    height: 140%;
   }
 } 
 
